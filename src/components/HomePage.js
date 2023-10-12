@@ -1,4 +1,8 @@
+
 import React, { useState } from "react";
+import { Message } from "../classes/Message";
+import { log } from "console";
+
 
 
 const HomePage = () => {
@@ -7,6 +11,7 @@ const HomePage = () => {
   const [message, setMessage] = useState("");
   const [notification, setNotification] = useState("");
   const [data, setData] = useState([]);
+
 
   function sendData() {
     setNotification("");
@@ -20,8 +25,8 @@ const HomePage = () => {
       );
       return;
     }
-  
-
+      var userMessage = new Message(name, email, message)
+     console.log(userMessage.inLine());
   }
 
   return (
